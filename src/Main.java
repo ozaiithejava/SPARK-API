@@ -10,7 +10,8 @@ public class Main {
         port(4567);
 
         // Veritabanı tablolarını oluşturmak için TableManager kullanılır
-        TableManager.createTables();
+        TableManager tableManager = new TableManager();
+        tableManager.createTables();
 
         // HTTP isteği geldiğinde öncelikle bu metot çalışır
         before((request, response) -> {
@@ -20,14 +21,17 @@ public class Main {
             response.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
         });
 
+        // Router sınıfının örneği oluşturulur
+        Router router = new Router();
+
         // Login endpoint'i tanımlanır
-        post("/login", Router.loginRoute);
+        post("/login", router::loginRoute);
 
         // Register endpoint'i tanımlanır
-        post("/register", Router.registerRoute);
+        post("/register", router::registerRoute);
 
         // Logout endpoint'i tanımlanır
-        post("/logout", Router.logoutRoute);
+        post("/logout", router::logoutRoute);
 
         // Diğer route'lar ve metotlar burada eklenebilir.
 
@@ -37,8 +41,6 @@ public class Main {
         });
 
         // Uygulama sonlandığında Spark'ı kapat
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            stop();
-        }));
+        Runtime.getRuntime().addShutdownHook(new Thread(Main::stop));
     }
 }

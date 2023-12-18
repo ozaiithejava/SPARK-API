@@ -19,9 +19,16 @@ POST /register?username={username}&password={password}&email={email}
 POST /logout
 ```
 
-### İçerik:
- - DatabaseManager
- - Router
- - JwtManager
- - TableManager
- - Main
+
+## İçerik:
+
+- **DatabaseManager:** Veritabanı işlemlerini yönetir.
+- **Router:** Spark framework'ü kullanarak API endpoint'lerini yönetir.
+- **JwtManager:** JSON Web Token (JWT) oluşturma, doğrulama ve işlemleri yönetir.
+- **TableManager:** Veritabanı tablolarını oluşturmayı yönetir.
+- **Main:** Uygulamanın başlangıç noktasını oluşturur ve Spark framework'ünü başlatır.
+
+## Proje Geliştirme
+
+Bu projeyi geliştirmeye katkıda bulunmak isterseniz:
+

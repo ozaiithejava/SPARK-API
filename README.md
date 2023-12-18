@@ -32,7 +32,10 @@ POST /logout
 
 Bu projeyi geliştirmeye katkıda bulunmak isterseniz:
 
-[![Coffee Me](https://img.shields.io/badge/Coffee-Me-brown?style=flat-square)](link_to_coffee)
-[![Spark Framework Documentation](https://img.shields.io/badge/Spark%20Framework-Documentation-green?style=flat-square)](link_to_spark_docs)
-[![Discord](https://img.shields.io/badge/Discord-Join-blue?style=flat-square)](link_to_discord)
 
+
+| Hizmet                    |                 Buton                |
+|---------------------------|:----------------------------------:|
+| ☕️ Coffee Me               | [![Coffee Me](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Donate-orange?style=flat-square)](link_to_coffee) |
+| 📖 Spark Framework Docs    | [![Spark Docs](https://img.shields.io/badge/Spark%20Docs-Read-green?style=flat-square)](link_to_spark_docs) |
+| 💬 Discord Join            | [![Discord](https://img.shields.io/badge/Join%20Discord-Chat-blue?style=flat-square)](link_to_discord) |

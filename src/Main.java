@@ -9,6 +9,9 @@ public class Main {
         // Sunucu portu belirlenir (örneğin: 4567)
         port(4567);
 
+        // Veritabanı tablolarını oluşturmak için TableManager kullanılır
+        TableManager.createTables();
+
         // HTTP isteği geldiğinde öncelikle bu metot çalışır
         before((request, response) -> {
             // CORS (Cross-Origin Resource Sharing) ayarları
